@@ -14,8 +14,8 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={StudentsPage} />
-          <Route exact path="/add" component={AddStudentPage} />
-          <Route exact path="/student" component={StudentPage} />
+          <Route exact path="/student" component={AddStudentPage} />
+          <Route exact path="/student/:id" component={StudentPage} />
         </Switch>
       </header>
     </div>

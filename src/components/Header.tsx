@@ -7,12 +7,6 @@ export const Header: React.FC = () => (
       Students
     </NavLink>
     {'|'}
-    <NavLink to="/add" exact>
-      Add Student
-    </NavLink>
-    {'|'}
-    <NavLink to="/student" exact>
-      Student Details
-    </NavLink>
+    <NavLink to="/student">Add Student</NavLink>
   </nav>
 );
