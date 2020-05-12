@@ -9,18 +9,22 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <section className="hero is-fullheight">
+      <div className="hero-head">
         <Header />
-        <StoreProvider>
-          <Switch>
-            <Route exact path="/" component={StudentsPage} />
-            <Route exact path="/student" component={AddStudentPage} />
-            <Route exact path="/student/:id" component={StudentPage} />
-          </Switch>
-        </StoreProvider>
-      </header>
-    </div>
+      </div>
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <StoreProvider>
+            <Switch>
+              <Route exact path="/" component={StudentsPage} />
+              <Route exact path="/student" component={AddStudentPage} />
+              <Route exact path="/student/:id" component={StudentPage} />
+            </Switch>
+          </StoreProvider>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -11,10 +11,12 @@ export const StudentsPage: React.FC<StudentsPageProps> = observer(({ history }) 
 
   const handleDelete = (student: Student) => {
     store.deleteStudent(student);
+    console.log('delete');
   };
 
   const handleSelect = (student: Student) => {
     history.push(`/student/${student.id}`);
+    console.log('select');
   };
 
   return (
