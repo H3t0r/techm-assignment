@@ -1,10 +1,11 @@
 export interface Student {
-  firstName: string;
-  lastName: string;
   address: string;
   city: string;
-  phone: string;
+  firstName: string;
   gpa: number;
+  id: number;
+  lastName: string;
+  phone: string;
 }
 
 export interface FormProps {

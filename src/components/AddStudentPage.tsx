@@ -1,29 +1,36 @@
-import React, { useState } from 'react';
-import { StudentForm } from './StudentForm';
+import { observer } from 'mobx-react';
 import { Student } from '../models/form.model';
+import { StudentForm } from './StudentForm';
+import { useStore } from '../store/store';
+import React, { useState } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 
-export const AddStudentPage: React.FC = () => {
+interface AddStudentPageProps extends RouteComponentProps<any> {}
+
+export const AddStudentPage: React.FC<AddStudentPageProps> = observer(({ history }) => {
   const newStudent: Student = {
-    firstName: '',
-    lastName: '',
     address: '',
     city: '',
-    phone: '',
+    firstName: '',
     gpa: 0,
+    id: 0,
+    lastName: '',
+    phone: '',
   };
-  const [student, setStudent] = useState<Student>({ ...newStudent });
+  const [student, setStudent] = useState<Student>({ ...newStudent, id: Date.now() });
+  const store = useStore();
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
     setStudent((previous) => ({ ...previous, [name]: value }));
-  }
+  };
 
-  function handleSave(event: React.FormEvent): void {
+  const handleSave = (event: React.FormEvent): void => {
     event.preventDefault();
-
-    console.log(student);
-  }
+    store.addStudent(student);
+    history.push('/');
+  };
 
   return <StudentForm onChange={handleChange} onSave={handleSave} student={student} />;
-};
+});
