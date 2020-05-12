@@ -2,10 +2,11 @@ export interface Student {
   address: string;
   city: string;
   firstName: string;
-  gpa: number;
+  gpa: string;
   id: number;
   lastName: string;
   phone: string;
+  photo?: string;
 }
 
 export interface FormProps {

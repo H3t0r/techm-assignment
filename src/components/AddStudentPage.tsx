@@ -12,7 +12,7 @@ export const AddStudentPage: React.FC<AddStudentPageProps> = observer(({ history
     address: '',
     city: '',
     firstName: '',
-    gpa: 0,
+    gpa: '0',
     id: 0,
     lastName: '',
     phone: '',
