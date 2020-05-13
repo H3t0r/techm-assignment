@@ -6,6 +6,7 @@ import { StudentsPage } from './components/StudentsPage';
 import { Route, Switch } from 'react-router-dom';
 import React from 'react';
 import './App.scss';
+import { PageNotFound } from './components/PageNotFound';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route exact path="/" component={StudentsPage} />
               <Route exact path="/student" component={AddStudentPage} />
               <Route path="/student/:id" component={StudentPage} />
+              <Route component={PageNotFound} />
             </Switch>
           </StoreProvider>
         </div>
