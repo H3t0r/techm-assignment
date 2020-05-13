@@ -15,7 +15,7 @@ export const Header: React.FC = () => (
           <NavLink className="navbar-item" activeClassName="is-active" to="/" exact>
             Students
           </NavLink>
-          <NavLink className="navbar-item" activeClassName="is-active" to="/student">
+          <NavLink className="navbar-item" activeClassName="is-active" to="/student" exact>
             Add Student
           </NavLink>
         </div>

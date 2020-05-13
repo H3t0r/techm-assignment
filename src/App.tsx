@@ -19,7 +19,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={StudentsPage} />
               <Route exact path="/student" component={AddStudentPage} />
-              <Route exact path="/student/:id" component={StudentPage} />
+              <Route path="/student/:id" component={StudentPage} />
             </Switch>
           </StoreProvider>
         </div>
