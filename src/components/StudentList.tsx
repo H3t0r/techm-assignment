@@ -45,11 +45,14 @@ export const StudentList: React.FC<StudentListProps> = ({ onDelete, onSelect, st
   };
 
   return (
-    <div className="box">
-      <table className="table is-striped is-hoverable is-fullwidth">
-        {renderTHead()}
-        {renderTBody()}
-      </table>
-    </div>
+    <>
+      <h2 className="title">Student List</h2>
+      <div className="box">
+        <table className="table is-striped is-hoverable is-fullwidth">
+          {renderTHead()}
+          {renderTBody()}
+        </table>
+      </div>
+    </>
   );
 };

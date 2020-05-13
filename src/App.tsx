@@ -14,7 +14,7 @@ function App() {
         <Header />
       </div>
       <div className="hero-body">
-        <div className="container has-text-centered">
+        <div className="container">
           <StoreProvider>
             <Switch>
               <Route exact path="/" component={StudentsPage} />
